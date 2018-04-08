@@ -245,8 +245,8 @@ module.exports = function (app, socketIoServer) {
             logger.debug(to + "|" + roomid + "|" + text + "|");
 
             var twilioNumber = '+18444599647';
-            var accountSid = 'AC0cebd313cef7070bfdf453e201cdf4aa';
-            var authToken = 'e3c90a5da0624e45d508674ad05c7465';
+            var accountSid = '***';
+            var authToken = '***';
 
             var client = require('twilio')(accountSid, authToken);
 
