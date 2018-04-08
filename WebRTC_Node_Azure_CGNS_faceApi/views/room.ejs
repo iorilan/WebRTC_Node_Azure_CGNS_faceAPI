@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name='description' content='WebRTC Reference App' />
+		<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="/css/room.css" media="screen" />
+		
+
+		<script>var HOST_ADDRESS='<%= hostAddress %>';</script>  
+		<script src='/socket.io/socket.io.js'></script>
+		<script src='/js/lib/adapter.js'></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>		
+		<script src='/js/meeting.js'></script>
+		<script src='/js/room.js'></script>
+		
+		<title>Video Conference</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<div id="videos">
+                <div id="videosWrapper">
+				    <div id="localVideoWrap" class='videoWrap'>
+					    <video class="videoBox" id="localVideo" autoplay controls playsinline="true">
+							
+						</video>
+					</div>
+                </div>
+			</div>
+			<div class="row">
+				<input type="button" class="btn btn-danger" onclick="window.location = window.location.origin;" value="End Call"/>
+			</div>
+		</div>
+		
+		<div id="scoreboard" style="display:<%= scoreboarddisplay %>">
+			<div>
+				<canvas id="pnlScreen" width="600" height="480" ></canvas>
+				<img src="https://yourappdomain.azurewebsites.net/IC.png" width="600" height="480" />
+			</div>
+			<div style="position:absolute;left:0;top:0">
+				<div>
+					<span id="lblValidResult"></span>
+				</div>
+				<input type="button" value="check score" id="btnCheckScore" class="btn btn-danger" />
+				<textarea type="text" id="txtScore" class="form-control" style="height:300px;width:300px" ></textarea>
+			<div>
+		</div>
+		
+	</body>
+
+</html>

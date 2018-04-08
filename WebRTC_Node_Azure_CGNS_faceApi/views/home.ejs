@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name='keywords' content='WebRTC, HTML5, JavaScript' />
+		<meta name='description' content='WebRTC Video Conference App' />
+		<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>	
+		<script src='/js/home.js'></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/home.css" media="screen" />
+		<title>WebRTC Video Conference App Example With Multiple peers</title>
+	</head>
+	<body>  
+        <main id="container">
+			<section id="success">
+				<div id="room-link"><a id="room-url" target="_blank"></a></div>
+				<br>
+				<div class="bubble">
+					Video call link 
+					<br><br>
+					<span>Send this link to anyone you wish to invite into this call
+                    </span>
+                </div>
+				<div class="bubble" id="divCalling" style="display:none">
+					Select User to answer 
+					<select id="callingUsers" class="form-control"></select>
+					<input type="button" class="btn btn-success" id="btnAnswerCall" value="Answer" />
+				</div>
+
+				<div class="clear"></div>
+				<br />
+				<br />
+				<div class="row">
+					<div class="col-md-6">
+						<div class="col-md-8">
+							<input type="number" id="txtPhone" class="form-control" />
+						</div> 
+						<div class="col-md-4">
+							<input type="button" id="btnInvite" value="SMS Invite" class="btn btn-primary"/>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="col-md-8">
+							<select id="ddlUser" class="form-control">
+								<option value="">Select One</option>
+							</select>	
+						</div>
+						<div class="col-md-4">
+							<input type="button" id="btnCall" value="Call" class="btn btn-danger"/>
+						</div>
+					</div>
+				</div>
+				
+	    	</section>
+        </main>                     
+	</body>
+</html>
